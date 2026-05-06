@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center> <h1>Student Result Calculator</h1>
+   <h1>Enter Number of subject</h1>
+   <input type="number" id="subjects" placeholder=" " >
+   <button id="enter-btn"  onclick="getSubjects()">Enter</button>
+   <button id="result-btn" onclick="getResult()">Result</button>
+   <h2 id="total">Total:</h2>
+   <h2 id="avg">Average:</h2>
+   <h2 id="grd">Grade:</h2>
+   </center>
+   <script>
+    
+
+let totalEl = document.getElementById("total")
+let avgEl = document.getElementById("avg")
+let grdEl = document.getElementById("grd")
+let num=0
+   let sum=0
+function getSubjects(){
+    sum=0
+    num=document.getElementById("subjects").value
+   console.log(num)
+   for(let i=0;i<num;i++){
+    let marks=Number (prompt("Enter subject's Score"))
+    sum+=marks
+    console.log(sum)
+   }
+}
+    function getResult(){
+
+let avg = sum / num
+let grade = ""
+
+if(avg >= 90){
+grade = "A"
+}
+else if(avg >= 75){
+grade = "B"
+}
+else if(avg >= 60){
+grade = "C"
+}
+else{
+grade = "D"
+}
+
+totalEl.textContent = "Total: " + sum
+avgEl.textContent = "Average: " + avg
+grdEl.textContent = "Grade: " + grade
+
+}
+   
+
+
+
+
+</script>
+</body>
+</html>

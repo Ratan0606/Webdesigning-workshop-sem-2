@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Counter Application</title>
+    <link rel="stylesheet" href="src/App.jsx">
     <link rel="stylesheet" href="src/index.css">
-    <link rel="stylesheet" href="src/main.jsx">
+    
 </head>
 <body>
 
     <div class="container">
-        <h1>Student Information</h1>
 
         <div class="card">
-            <h2>Rahul Sharma</h2>
-            <p>Course: Computer Science</p>
-            <p>Marks: 85</p>
-        </div>
+            <h1>React Counter <br> Application</h1>
 
-        <div class="card">
-            <h2>Anita Verma</h2>
-            <p>Course: Information Technology</p>
-            <p>Marks: 92</p>
-        </div>
+            <h2 id="count">0</h2>
 
-        <div class="card">
-            <h2>Rohan Gupta</h2>
-            <p>Course: Electronics</p>
-            <p>Marks: 78</p>
+            <div class="buttons">
+                <button onclick="increment()">Increment (+)</button>
+
+                <button onclick="decrement()">Decrement (-)</button>
+            </div>
+
+            <button class="reset" onclick="resetCount()">Reset</button>
         </div>
 
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
